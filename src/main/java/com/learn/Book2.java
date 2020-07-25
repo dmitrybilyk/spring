@@ -3,7 +3,7 @@ package com.learn;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Book {
+public class Book2 {
     private String name;
 
     public String getName() {

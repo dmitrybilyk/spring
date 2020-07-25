@@ -1,30 +1,40 @@
 package com.learn;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+@Component
 public class Student {
     private int no;
     private String name;
+
     private Book book;
     private List<Book> bookList;
 
+//    @Autowired
     public Student(Book book, List<Book> books) {
         this.book = book;
         this.bookList = books;
     }
+
+    public Student() {
+    }
+
 
     public Book getBook() {
         return book;
     }
 
 
-//
-//    public void setBook(Book book) {
-//        this.book = book;
-//    }
+
+    @Autowired
+    public void setBook2(Book book2) {
+        this.book = book2;
+    }
 
     public int getNo() {
         return no;
@@ -46,6 +56,7 @@ public class Student {
         return bookList;
     }
 
+//    @Autowired
     public void setBookList(List<Book> bookList) {
         this.bookList = bookList;
     }

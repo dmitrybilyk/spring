@@ -1,24 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
-    <bean id="student" class="com.learn.Student">
-        <property name="no" value="15"/>
-        <property name="name" value="Tom"/>
-        <constructor-arg name="book" ref="book"/>
-        <constructor-arg ref="anotherList"/>
-    </bean>
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util
+       https://www.springframework.org/schema/util/spring-util.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd"
+       default-autowire="default">
+<!--    <bean id="student" class="com.learn.Student"/>-->
+<!--        <property name="no" value="15"/>-->
+<!--        <property name="name" value="Tom"/>-->
+<!--        <constructor-arg name="book" ref="book"/>-->
+<!--        <constructor-arg ref="anotherList"/>-->
 
-    <util:list id="anotherList">
-        <ref bean="book"/>
-        <ref bean="book2"/>
-    </util:list>
+<!--    <util:list id="anotherList">-->
+<!--        <ref bean="book"/>-->
+<!--        <ref bean="book2"/>-->
+<!--    </util:list>-->
 
-    <bean id="book" class="com.learn.Book">
-        <property name="name" value="Tom Soyer"/>
-    </bean>
+<!--    <bean id="book" class="com.learn.Book">-->
+<!--        <property name="name" value="Tom Soyer"/>-->
+<!--    </bean>-->
 
-    <bean id="book2" class="com.learn.Book">
-        <property name="name" value="Tom Soyer2"/>
-    </bean>
+<!--    <bean id="book2" class="com.learn.Book">-->
+<!--        <property name="name" value="Tom Soyer2"/>-->
+<!--    </bean>-->
+
+    <context:annotation-config />
+    <context:component-scan base-package="com.learn" />
 </beans>
