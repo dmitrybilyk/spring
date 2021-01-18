@@ -1,0 +1,32 @@
+Spring is a DEPENDENCY INJECTION FRAMEWORK.
+Spring Framework help to create loosley coupled applications.
+
+Beans - the instance of objects that are managed by Spring.
+
+Autowiring - the process of identifying dependencies and populating them.
+
+IOC Container - includes everything what implements Inversion Of Control.  In Spring it's the Application Context.
+
+1. What is inversion of control
+IOC - is the mechanism which is related to how dependencies are
+handed to target class. Target class doesn't manage it dependencies,
+all the dependencies are managed by bean container (Spring fore
+example). Dependencies some from outside. In this way it's easy
+to test suche code, to replace the implementations, to have less
+coupling, to program with interfaces etc.
+
+2. Dependency injection is a design pattern - the implementation of
+IOC. It resolved dependencies using spring container. Container of
+beans. Dependency injection allows to comply single responsobility principle
+and IOC principle.
+
+3. How to inject bean:
+- constructor based
+- setter based (if we want to have kind of optional dependency)
+- field based
+
+4. Mode of autowiring:
+- by Type
+- constructor (the same as By Type but constructor is used)
+- by Name (setter method, name of field should be the same as name of bean in xml or class name itself)
+
