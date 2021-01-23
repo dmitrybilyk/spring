@@ -30,3 +30,5 @@ and IOC principle.
 - constructor (the same as By Type but constructor is used)
 - by Name (setter method, name of field should be the same as name of bean in xml or class name itself)
 
+
+https://mindmajix.com/java-spring-interview-questions - 38 question.
