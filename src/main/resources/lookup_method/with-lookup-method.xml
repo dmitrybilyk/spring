@@ -2,9 +2,9 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
-    <bean id="passenger" class="com.learn.lookup_method.Passenger">
+    <bean scope="prototype" id="passenger" class="com.learn.lookup_method.Passenger">
     </bean>
-    <bean class="com.learn.lookup_method.Car">
+    <bean class="com.learn.lookup_method.CarWithLookup">
         <lookup-method name="createPassenger" bean="passenger" />
     </bean>
 </beans>
