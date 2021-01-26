@@ -5,6 +5,7 @@ import com.learn.configuration.domain.dto.SomeDto;
 import lombok.AllArgsConstructor;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -12,8 +13,10 @@ import org.springframework.stereotype.Service;
 public class ExampleServiceImpl implements ExampleService {
   private ExampleDao exampleDao;
 
-  public ExampleServiceImpl(ExampleDao exampleDao) {
-    this.exampleDao = exampleDao;
+  @Autowired
+//  public ExampleServiceImpl(@Qualifier("exampleHibernateDaoImpl") ExampleDao exampleDao) {
+  public ExampleServiceImpl(ExampleDao exampleHibernateDaoImpl) {
+    this.exampleDao = exampleHibernateDaoImpl;
   }
 
   @Override

@@ -22,4 +22,9 @@ public class ExampleConfiguration {
   public ExampleController exampleController() {
     return new ExampleController(exampleService());
   }
+
+  @Bean
+  public UserOfRequiredBean userOfRequiredBean() {
+    return new UserOfRequiredBean();
+  }
 }

@@ -31,4 +31,31 @@ and IOC principle.
 - by Name (setter method, name of field should be the same as name of bean in xml or class name itself)
 
 
+Spring Transaction Management:
+Types of transaction management:
+1. Programmatic transaction management.
+2. Declarative transaction management.
+
+
+AOP -  is a programming technique that allows programmers to modularize
+some behavior which is used then across different parts of the project.
+
+Aspect - is a module which encopsulates the behavior that should be
+executed (loggin aspect for instance).
+
+Concern - behavior we want to implement.
+Crosscutting conserns - concerns which are needed everywhere in the project.
+
+Joinpoint - is a point where behavior will be plugged in.
+Advice - actual action, actual peace of code that is invoked during
+the program execution bye the Spring AOP framework. (before, after, after-returning,
+after-throwing, around).
+
+Pointcut - is a set of one or more joinpoints where advice should be executed.
+(expressions or patterns are used).
+
+
+
+
+
 https://mindmajix.com/java-spring-interview-questions - 38 question.

@@ -8,7 +8,7 @@ public class JavaConfigurationMain {
   public static void main(String[] args) {
     ApplicationContext context = new ClassPathXmlApplicationContext("/configuration.java/applicationContext.xml");
 
-    ExampleController controller = (ExampleController) context.getBean("exampleController");
-    controller.handleRequest("Some name", 100);
+    UserOfRequiredBean controller = (UserOfRequiredBean) context.getBean("userOfRequiredBean");
+//    controller.handleRequest("Some name", 100);
   }
 }
