@@ -5,8 +5,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util
        https://www.springframework.org/schema/util/spring-util.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
-    <context:annotation-config />
-    <context:component-scan base-package="com.learn.configuration.java" />
+<!--    <context:annotation-config />-->
+<!--    <context:component-scan base-package="com.learn.configuration.java" />-->
 
-    <bean name="exampleConfiguration" class="com.learn.configuration.java.ExampleConfiguration"></bean>
+<!--    <bean name="exampleConfiguration" class="com.learn.configuration.java.ExampleConfiguration"></bean>-->
 </beans>

@@ -1,14 +1,13 @@
 package com.learn.configuration.java;
 
-import com.learn.configuration.domain.controller.ExampleController;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class JavaConfigurationMain {
   public static void main(String[] args) {
-    ApplicationContext context = new ClassPathXmlApplicationContext("/configuration.java/applicationContext.xml");
+    ApplicationContext context = new AnnotationConfigApplicationContext(ExampleConfiguration.class);
 
     UserOfRequiredBean controller = (UserOfRequiredBean) context.getBean("userOfRequiredBean");
-//    controller.handleRequest("Some name", 100);
+    controller.print();
   }
 }

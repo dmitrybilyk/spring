@@ -17,6 +17,10 @@ public class UserOfRequiredBean {
 //    this.requiredBean = requiredBean;
 //  }
 
+  public void print() {
+    System.out.println("fdfdf");
+  }
+
   @Required
   public void setRequiredString(String requiredString) {
     this.requiredString = requiredString;
