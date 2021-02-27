@@ -29,4 +29,21 @@ public class ExampleServiceImpl implements ExampleService {
     return exampleDao.returnSomething(someDto);
   }
 
+  @Override
+  public int returnSomethingWithStaticUsage(SomeDto someDto) {
+    String result = someStaticMethod("some value");
+    if (result.equals("Dima")) {
+      System.out.println(result.length());
+      someDto.setDtoName(result);
+      return exampleDao.returnSomething(someDto);
+    } else {
+      return 4;
+    }
+
+  }
+
+  public static String someStaticMethod(String value) {
+    return value;
+  }
+
 }

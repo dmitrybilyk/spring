@@ -13,7 +13,7 @@
     <bean name="exampleDao" class="com.learn.configuration.domain.dao.ExampleDaoImpl"/>
 
     <bean name="exampleService" class="com.learn.configuration.domain.service.ExampleServiceImpl">
-        <constructor-arg name="exampleDao" ref="exampleDao"/>
+        <constructor-arg name="exampleHibernateDaoImpl" ref="exampleDao"/>
     </bean>
 
 </beans>
